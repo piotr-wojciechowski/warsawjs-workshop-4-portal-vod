@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <ul>
+    <li *ngFor="let item of ['joe', 'mike']; let idx = index">
+      {{idx}} - {{item}}
+    </li>
+  </ul>
+
+  <input type="checkbox" [checked]="access" (change)="toggle($event.target)">
+
+  <div *ngIf="access" class="badge badge-success">
+    access is true
+  </div>
+</div>
