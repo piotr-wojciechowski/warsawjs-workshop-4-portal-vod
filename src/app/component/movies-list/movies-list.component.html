@@ -1,11 +1,15 @@
+filters: {{filters | json}}
 <div class="row">
-  <div *ngFor="let item of items" class="col-6">
+  <div *ngFor="let item of items | search:filters" class="col-6 mb-3">
     <div class="card">
       <div class="card-header">
         {{item.name}}
       </div>
       <div class="card-block">
         <app-iframe [url]="item.url"></app-iframe>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-danger" (click)="removeItem(item)">Remove</button>
       </div>
     </div>
   </div>

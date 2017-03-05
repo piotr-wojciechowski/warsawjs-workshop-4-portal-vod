@@ -1,0 +1,24 @@
+<template #content>
+  <div class="card">
+    <div class="card-header">
+      add movie
+    </div>
+    <div class="card-block">
+      <form #f="ngForm">
+        <div class="form-group">
+          <input type="text" required name="name" class="form-control" placeholder="Name" ngModel>
+        </div>
+        <div class="form-group">
+          <input type="text" required name="url" class="form-control" placeholder="Url" ngModel>
+        </div>
+        <button (click)="ok(f)">Ok</button>
+        <!--<button (click)="cancel()">Cancel</button>-->
+      </form>
+    </div>
+    <div class="card-footer">
+
+    </div>
+  </div>
+</template>
+
+<button class="btn btn-primary" (click)="open(content)">add movie</button>

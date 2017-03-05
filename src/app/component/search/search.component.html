@@ -1,4 +1,8 @@
-<p>
-  items: {{options}}
-
-</p>
+<div class="card bg-info mb-3">
+  <div class="card-footer">Search</div>
+  <div class="card-block">
+    <div class="form-group" *ngFor="let item of options">
+      <input type="text" [name]="item" (input)="updateFilters($event.target)" class="form-control" [placeholder]="item">
+    </div>
+  </div>
+</div>
